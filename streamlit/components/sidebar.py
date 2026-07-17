@@ -7,10 +7,8 @@ import streamlit as st
 
 def render_sidebar():
     with st.sidebar:
-        st.image(
-            "streamlit/assets/logo.png",
-            use_container_width=True,
-        )
+        st.title("📊 HELIX AI SHOP")
+        st.caption("Enterprise Machine Learning Platform")
 
         st.markdown("---")
 
@@ -43,9 +41,7 @@ Machine Learning Platform
 
 📊 Business Analytics
 
-👥 Customer Segmentation
-
-🤖 AI Prediction
+🤖 Revenue Prediction
 
 📉 Model Performance
 

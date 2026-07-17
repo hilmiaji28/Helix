@@ -1,9 +1,18 @@
 /* ==========================================================
    HELIX AI SHOP
-   Global Theme
+   Enterprise Dashboard Theme
+   Part 1
 ========================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* ==========================================================
+   IMPORT FONT
+========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
 
 html,
 body,
@@ -11,49 +20,41 @@ body,
     font-family: "Inter", sans-serif;
 }
 
-/* Main App */
+/* ==========================================================
+   MAIN APP
+========================================================== */
 
 .stApp {
 
-    background: #F5F7FA;
+    background-color: #0F172A;
 
-    color: #1F2937;
-
-}
-
-/* Hide Streamlit Default */
-
-#MainMenu {
-    visibility: hidden;
-}
-
-footer {
-    visibility: hidden;
-}
-
-header {
-    visibility: hidden;
-}
-
-/* Reduce Padding */
-
-.block-container {
-
-    padding-top: 2rem;
-
-    padding-left: 2rem;
-
-    padding-right: 2rem;
-
-    padding-bottom: 2rem;
+    color: #F8FAFC;
 
 }
 
 /* ==========================================================
-Sidebar
+   MAIN CONTAINER
 ========================================================== */
 
-section[data-testid="stSidebar"] {
+.main .block-container {
+
+    padding-top: 2rem;
+
+    padding-bottom: 2rem;
+
+    padding-left: 3rem;
+
+    padding-right: 3rem;
+
+    max-width: 1400px;
+
+}
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+[data-testid="stSidebar"] {
 
     background: #111827;
 
@@ -61,210 +62,573 @@ section[data-testid="stSidebar"] {
 
 }
 
-section[data-testid="stSidebar"] * {
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
 
-    color: white;
-
-}
-
-section[data-testid="stSidebar"] img {
-
-    margin-bottom: 20px;
+    color: #FFFFFF;
 
 }
 
-section[data-testid="stSidebar"] hr {
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] li {
 
-    border: 1px solid #374151;
-
-}
-
-/* ==========================================================
-Hero
-========================================================== */
-
-.hero-title {
-
-    font-size: 52px;
-
-    font-weight: 800;
-
-    background: linear-gradient(90deg,
-            #2563EB,
-            #06B6D4);
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    margin-bottom: 5px;
-
-}
-
-.hero-subtitle {
-
-    font-size: 20px;
-
-    color: #6B7280;
-
-    margin-bottom: 30px;
+    color: #CBD5E1;
 
 }
 
 /* ==========================================================
-Metric Cards
+   TITLES
 ========================================================== */
 
-div[data-testid="metric-container"] {
+h1 {
 
-    background: white;
+    color: #F8FAFC;
 
-    border-radius: 18px;
+    font-weight: 700;
+
+}
+
+h2 {
+
+    color: #F8FAFC;
+
+    font-weight: 600;
+
+}
+
+h3 {
+
+    color: #E2E8F0;
+
+    font-weight: 600;
+
+}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+p {
+
+    color: #CBD5E1;
+
+    line-height: 1.7;
+
+}
+
+label {
+
+    color: #CBD5E1;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a {
+
+    color: #60A5FA;
+
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    color: #93C5FD;
+
+}
+
+/* ==========================================================
+   HORIZONTAL LINE
+========================================================== */
+
+hr {
+
+    border-color: #334155;
+
+}
+
+/* ==========================================================
+   CAPTION
+========================================================== */
+
+[data-testid="stCaptionContainer"] {
+
+    color: #94A3B8;
+
+}
+
+/* ==========================================================
+   COMPONENTS
+   Part 2
+========================================================== */
+
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+div[data-testid="stVerticalBlock"]>div:has(> div[data-testid="stVerticalBlockBorderWrapper"]) {
+
+    border-radius: 16px;
+
+}
+
+
+/* ==========================================================
+   METRIC
+========================================================== */
+
+[data-testid="stMetric"] {
+
+    background: #1E293B;
+
+    border: 1px solid #334155;
+
+    border-radius: 16px;
 
     padding: 18px;
 
-    border: 1px solid #E5E7EB;
-
-    box-shadow:
-
-        0px 8px 24px rgba(0,
-            0,
-            0,
-            0.06);
-
-    transition: 0.25s;
+    transition: all .25s ease;
 
 }
 
-div[data-testid="metric-container"]:hover {
+[data-testid="stMetric"]:hover {
 
-    transform: translateY(-4px);
+    border-color: #3B82F6;
 
-    box-shadow:
-
-        0px 18px 30px rgba(37,
-            99,
-            235,
-            0.15);
+    transform: translateY(-2px);
 
 }
+
+[data-testid="stMetricLabel"] {
+
+    color: #94A3B8;
+
+    font-size: .9rem;
+
+}
+
+[data-testid="stMetricValue"] {
+
+    color: #F8FAFC;
+
+    font-weight: 700;
+
+}
+
 
 /* ==========================================================
-Buttons
+   BUTTON
 ========================================================== */
 
 .stButton>button {
 
     width: 100%;
 
+    border-radius: 10px;
+
     border: none;
 
-    border-radius: 14px;
-
-    padding: 14px;
-
-    background: linear-gradient(90deg,
-            #2563EB,
-            #0EA5E9);
+    background: #2563EB;
 
     color: white;
 
-    font-size: 16px;
+    font-weight: 600;
 
-    font-weight: 700;
-
-    transition: 0.3s;
+    transition: 0.25s;
 
 }
 
 .stButton>button:hover {
 
-    transform: translateY(-2px);
-
-    background: linear-gradient(90deg,
-            #1D4ED8,
-            #0284C7);
+    background: #1D4ED8;
 
 }
+
 
 /* ==========================================================
-Inputs
+   PRIMARY BUTTON
 ========================================================== */
 
-.stTextInput input,
-.stNumberInput input,
-.stDateInput input,
-.stSelectbox {
+.stDownloadButton>button {
 
-    border-radius: 12px !important;
+    width: 100%;
+
+    border-radius: 10px;
 
 }
 
-.stSelectbox div {
+
+/* ==========================================================
+   INPUT
+========================================================== */
+
+.stTextInput input {
+
+    border-radius: 10px;
+
+}
+
+.stNumberInput input {
+
+    border-radius: 10px;
+
+}
+
+.stTextArea textarea {
+
+    border-radius: 10px;
+
+}
+
+
+/* ==========================================================
+   SELECTBOX
+========================================================== */
+
+.stSelectbox {
+
+    border-radius: 10px;
+
+}
+
+
+/* ==========================================================
+   MULTISELECT
+========================================================== */
+
+.stMultiSelect {
+
+    border-radius: 10px;
+
+}
+
+
+/* ==========================================================
+   SLIDER
+========================================================== */
+
+.stSlider {
+
+    padding-top: 10px;
+
+}
+
+
+/* ==========================================================
+   ALERT
+========================================================== */
+
+[data-testid="stAlert"] {
 
     border-radius: 12px;
 
 }
 
+
 /* ==========================================================
-Tables
+   INFO BOX
 ========================================================== */
 
-[data-testid="stDataFrame"] {
+.stInfo {
 
-    border-radius: 15px;
+    border-radius: 12px;
 
-    overflow: hidden;
+}
 
-    border: 1px solid #E5E7EB;
+
+/* ==========================================================
+   SUCCESS
+========================================================== */
+
+.stSuccess {
+
+    border-radius: 12px;
+
+}
+
+
+/* ==========================================================
+   WARNING
+========================================================== */
+
+.stWarning {
+
+    border-radius: 12px;
+
+}
+
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.stError {
+
+    border-radius: 12px;
+
+}
+
+
+/* ==========================================================
+   EXPANDER
+========================================================== */
+
+.streamlit-expanderHeader {
+
+    font-weight: 600;
+
+}
+
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+button[data-baseweb="tab"] {
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+
+    color: #3B82F6;
 
 }
 
 /* ==========================================================
-Charts
+   DATAFRAME & TABLE
+   Part 3
+========================================================== */
+
+.stDataFrame {
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid #334155;
+
+}
+
+[data-testid="stTable"] {
+
+    border-radius: 12px;
+
+}
+
+
+/* ==========================================================
+   PLOTLY CHART
 ========================================================== */
 
 .js-plotly-plot {
 
-    border-radius: 18px;
+    border-radius: 12px;
 
-    background: white;
-
-    padding: 12px;
-
-    box-shadow:
-
-        0px 8px 20px rgba(0,
-            0,
-            0,
-            0.05);
+    overflow: hidden;
 
 }
 
+
 /* ==========================================================
-Alerts
+   PROGRESS BAR
 ========================================================== */
 
-.stAlert {
+.stProgress>div>div {
 
-    border-radius: 14px;
-
-    border: none;
+    background: #2563EB;
 
 }
 
+
 /* ==========================================================
-Footer
+   SPINNER
+========================================================== */
+
+.stSpinner {
+
+    color: #60A5FA;
+
+}
+
+
+/* ==========================================================
+   CODE BLOCK
+========================================================== */
+
+pre {
+
+    border-radius: 10px;
+
+    border: 1px solid #334155;
+
+}
+
+code {
+
+    border-radius: 6px;
+
+}
+
+
+/* ==========================================================
+   FILE UPLOADER
+========================================================== */
+
+[data-testid="stFileUploader"] {
+
+    border-radius: 12px;
+
+}
+
+
+/* ==========================================================
+   IMAGE
+========================================================== */
+
+img {
+
+    border-radius: 10px;
+
+}
+
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+hr {
+
+    margin-top: 1rem;
+
+    margin-bottom: 1rem;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+    height: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #0F172A;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #475569;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #64748B;
+
+}
+
+
+/* ==========================================================
+   FOOTER
 ========================================================== */
 
 .footer {
 
     text-align: center;
 
-    color: #9CA3AF;
+    color: #94A3B8;
 
-    margin-top: 50px;
+    font-size: 0.9rem;
 
-    font-size: 14px;
+    margin-top: 2rem;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid #334155;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1200px) {
+
+    .main .block-container {
+
+        padding-left: 2rem;
+
+        padding-right: 2rem;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .main .block-container {
+
+        padding-left: 1rem;
+
+        padding-right: 1rem;
+
+        padding-top: 1rem;
+
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL POLISH
+========================================================== */
+
+.stMetric {
+
+    margin-bottom: 0.5rem;
+
+}
+
+.stMarkdown {
+
+    line-height: 1.6;
+
+}
+
+.stButton {
+
+    margin-top: 0.25rem;
+
+}
+
+
+/* ==========================================================
+   REMOVE EXCESSIVE ANIMATION
+========================================================== */
+
+* {
+
+    scroll-behavior: smooth;
 
 }

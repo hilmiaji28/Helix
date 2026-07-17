@@ -30,4 +30,4 @@ class PredictionRequest(BaseModel):
 
 
 class PredictionResponse(BaseModel):
-    predicted_purchase_amount: float
+    predicted_revenue: float

@@ -41,12 +41,7 @@ class PredictionService:
 
         logger.info("Prediction completed successfully.")
 
-        return {
-            "predicted_purchase_amount": round(
-                float(prediction),
-                2,
-            )
-        }
+        return {"predicted_revenue": round(float(prediction), 2)}
 
 
 prediction_service = PredictionService()

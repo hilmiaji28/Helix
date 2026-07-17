@@ -43,16 +43,6 @@ best practice industri.
 """
     )
 
-with right:
-    st.image(
-        "streamlit/assets/logo.png",
-        use_container_width=True,
-    )
-
-st.divider()
-
-st.subheader("🛠 Technology Stack")
-
 c1, c2, c3 = st.columns(3)
 
 with c1:
@@ -128,9 +118,8 @@ with left:
 
 ✅ Business Analytics
 
-✅ AI Prediction
+✅ Revenue Prediction
 
-✅ Customer Segmentation
 
 """
     )
