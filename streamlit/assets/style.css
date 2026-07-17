@@ -1,0 +1,270 @@
+/* ==========================================================
+   HELIX AI SHOP
+   Global Theme
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html,
+body,
+[class*="css"] {
+    font-family: "Inter", sans-serif;
+}
+
+/* Main App */
+
+.stApp {
+
+    background: #F5F7FA;
+
+    color: #1F2937;
+
+}
+
+/* Hide Streamlit Default */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Reduce Padding */
+
+.block-container {
+
+    padding-top: 2rem;
+
+    padding-left: 2rem;
+
+    padding-right: 2rem;
+
+    padding-bottom: 2rem;
+
+}
+
+/* ==========================================================
+Sidebar
+========================================================== */
+
+section[data-testid="stSidebar"] {
+
+    background: #111827;
+
+    border-right: 1px solid #1F2937;
+
+}
+
+section[data-testid="stSidebar"] * {
+
+    color: white;
+
+}
+
+section[data-testid="stSidebar"] img {
+
+    margin-bottom: 20px;
+
+}
+
+section[data-testid="stSidebar"] hr {
+
+    border: 1px solid #374151;
+
+}
+
+/* ==========================================================
+Hero
+========================================================== */
+
+.hero-title {
+
+    font-size: 52px;
+
+    font-weight: 800;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #06B6D4);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 5px;
+
+}
+
+.hero-subtitle {
+
+    font-size: 20px;
+
+    color: #6B7280;
+
+    margin-bottom: 30px;
+
+}
+
+/* ==========================================================
+Metric Cards
+========================================================== */
+
+div[data-testid="metric-container"] {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    border: 1px solid #E5E7EB;
+
+    box-shadow:
+
+        0px 8px 24px rgba(0,
+            0,
+            0,
+            0.06);
+
+    transition: 0.25s;
+
+}
+
+div[data-testid="metric-container"]:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+
+        0px 18px 30px rgba(37,
+            99,
+            235,
+            0.15);
+
+}
+
+/* ==========================================================
+Buttons
+========================================================== */
+
+.stButton>button {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #0EA5E9);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+}
+
+.stButton>button:hover {
+
+    transform: translateY(-2px);
+
+    background: linear-gradient(90deg,
+            #1D4ED8,
+            #0284C7);
+
+}
+
+/* ==========================================================
+Inputs
+========================================================== */
+
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stSelectbox {
+
+    border-radius: 12px !important;
+
+}
+
+.stSelectbox div {
+
+    border-radius: 12px;
+
+}
+
+/* ==========================================================
+Tables
+========================================================== */
+
+[data-testid="stDataFrame"] {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    border: 1px solid #E5E7EB;
+
+}
+
+/* ==========================================================
+Charts
+========================================================== */
+
+.js-plotly-plot {
+
+    border-radius: 18px;
+
+    background: white;
+
+    padding: 12px;
+
+    box-shadow:
+
+        0px 8px 20px rgba(0,
+            0,
+            0,
+            0.05);
+
+}
+
+/* ==========================================================
+Alerts
+========================================================== */
+
+.stAlert {
+
+    border-radius: 14px;
+
+    border: none;
+
+}
+
+/* ==========================================================
+Footer
+========================================================== */
+
+.footer {
+
+    text-align: center;
+
+    color: #9CA3AF;
+
+    margin-top: 50px;
+
+    font-size: 14px;
+
+}
