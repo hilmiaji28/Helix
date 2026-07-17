@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "helix"
+version = "1.0.0"
+description = "HELIX Enterprise Commerce Intelligence Platform"
+authors = [
+    {name = "Hilmi Aji"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "plotly",
+    "seaborn",
+    "xgboost",
+    "lightgbm",
+    "catboost",
+    "tensorflow",
+    "fastapi",
+    "uvicorn",
+    "streamlit",
+    "mlflow",
+    "shap",
+    "joblib",
+    "python-dotenv",
+    "pyyaml",
+    "pydantic",
+    "pydantic-settings",
+    "pytest"
+]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
